@@ -40,7 +40,9 @@ export default function Home({ data }) {
             {data.map((post) => (
               <div key={post._id} className={styles.allLinks}>
                 <Link href={`/posts/${post._id}`}>
-                  <a className={styles.link}>{post.title}</a>
+                  <a className={styles.link}>
+                    {post.title ? post.title : "test"}
+                  </a>
                 </Link>
                 <p className={styles.date}>{post.date}</p>
               </div>
