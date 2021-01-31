@@ -35,7 +35,7 @@ export default function Post({ post }) {
       </Link>
 
       <div className={styles.container}>
-        <h1>{post.title ? post.title : "test"}</h1>
+        <h1>{"test"}</h1>
         <p className={styles.date}>{post.date}</p>
         <div dangerouslySetInnerHTML={{ __html: text }} />
       </div>
