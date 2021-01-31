@@ -1,65 +1,69 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import styles from "../styles/Home.module.css";
+import Layout from "../components/Layout";
+import getAge from "../utils/getAge";
+import formatDate from "../utils/formatDate";
 
-export default function Home() {
+export default function Home({ data }) {
+  const [storage, setStorage] = useState({});
+
+  useEffect(() => {
+    setStorage(JSON.parse(localStorage.getItem("userInfo")));
+  }, []);
+  const name = "Marcos Vinicius";
   return (
-    <div className={styles.container}>
+    <Layout home storage={storage}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Blog do Vini</title>
+        <link rel="icon" href="icon.svg" />
+        <script
+          src="https://kit.fontawesome.com/7356223ae9.js"
+          crossorigin="anonymous"
+        ></script>
       </Head>
+      <section className={styles.container}>
+        <div className={styles.content}>
+          <div className={styles.item1}>
+            <img className={styles.img} src="/profile.jpg" alt="" />
+            <h2>{name}</h2>
+          </div>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <p>
+            Oi eu sou Vini, tenho {getAge("01/06/1994")} anos, Desenvovedor Web
+            Full-Stack. Principais tecnologias: Javascript, React.js, HTML, CSS,
+            Node.js, MongoDB. entre em contado pelo email: marcosvims@gmail.com
+          </p>
+          <h1>Blog</h1>
+          <div>
+            {data.map((post) => (
+              <div key={post._id} className={styles.allLinks}>
+                <Link href={`/posts/${post._id}`}>
+                  <a className={styles.link}>{post.title}</a>
+                </Link>
+                <p className={styles.date}>{post.date}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
+      </section>
+    </Layout>
+  );
+}
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+export async function getStaticProps() {
+  const response = await fetch(
+    "http://vini-blog-backend.herokuapp.com/api/allposts"
+  );
+  const data = await response.json();
+  data.forEach((item) => {
+    return (item.date = formatDate(item.date));
+  });
+  data.reverse();
+
+  return {
+    props: { data },
+    revalidate: 10,
+  };
 }

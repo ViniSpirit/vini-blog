@@ -1,0 +1,49 @@
+.form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.form label {
+  display: flex;
+  padding-top: 20px;
+  width: 90%;
+  margin-bottom: 20px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.form input {
+  margin: auto;
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  border: 0;
+  border-bottom: 2px solid black;
+  outline: 0;
+}
+
+.form textarea {
+  height: 500px;
+}
+
+.form button {
+  border-radius: 5px;
+  margin-right: 40px;
+  width: 100px;
+  background-color: #333;
+  color: white;
+  height: 40px;
+  cursor: pointer;
+  border: 0;
+  font-size: 20px;
+}
+
+.form button:hover {
+  background-color: #008cba;
+}
