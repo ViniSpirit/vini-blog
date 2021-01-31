@@ -7,7 +7,7 @@ import html from "remark-html";
 import { useEffect, useState } from "react";
 import formatDate from "../../utils/formatDate";
 
-export default function Post({ post: {} }) {
+export default function Post({ post = {} }) {
   const [text, setText] = useState("");
 
   useEffect(() => {
