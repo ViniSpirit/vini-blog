@@ -51,22 +51,35 @@
     width: 100%;
   }
   .container div iframe {
-    width: 400px;
+    width: 500px;
     height: 300px;
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 500px) {
   .container div iframe {
-    width: 300px;
-    height: 200px;
+    width: 450px;
+    height: 300px;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 414px) {
+  .container div iframe {
+    width: 380px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 375px) {
   .container div iframe {
     width: 350px;
-    height: 250px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .container div iframe {
+    width: 340px;
+    height: 200px;
   }
 }
 
