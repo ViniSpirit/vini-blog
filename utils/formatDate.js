@@ -17,7 +17,6 @@ const formatDate = (date) => {
   const day = data.getDate() <= 9 ? `0${data.getDate()}` : data.getDate();
   let dataFormatada =
     day + "/ " + meses[data.getMonth()] + "/ " + data.getFullYear();
-  console.log(day);
   return dataFormatada;
 };
 

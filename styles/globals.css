@@ -4,7 +4,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Merriweather", "Georgia", serif;
   background-image: linear-gradient(to right, #fbfbfb, #c5c5e0);
 }
 
