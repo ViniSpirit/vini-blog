@@ -2,16 +2,16 @@
 
 .header {
   display: grid;
-  width: 90%;
+  width: 60%;
   margin: auto;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   border-bottom: 1px solid;
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 .social {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   grid-column-start: 2;
   grid-column-end: 3;

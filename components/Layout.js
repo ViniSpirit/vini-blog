@@ -31,7 +31,7 @@ export default function Layout({ children, home, storage }) {
               <i aria-hidden className="fab fa-twitter-square"></i>
             </a>
           </div>
-          {storage ? (
+          {/* {storage ? (
             <p className={styles.username}>Bem Vindo(a) {storage.name} !!</p>
           ) : (
             <div className={styles.item2}>
@@ -46,7 +46,7 @@ export default function Layout({ children, home, storage }) {
                 </Link>
               </li>
             </div>
-          )}
+          )} */}
         </header>
       ) : (
         ""
