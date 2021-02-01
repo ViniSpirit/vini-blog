@@ -21,6 +21,11 @@
   border-radius: 5px;
 }
 
+.content p {
+  margin-left: 10px;
+  letter-spacing: 1px;
+}
+
 .link {
   color: black;
   font-size: 25px;
