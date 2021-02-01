@@ -30,7 +30,7 @@ export default function Home({ data }) {
             <h2>{name}</h2>
           </div>
 
-          <p>
+          <p className={styles.p}>
             Oi eu sou Vini, tenho {getAge("01/06/1994")} anos, Desenvovedor Web
             Full-Stack. Principais tecnologias: Javascript, React.js, HTML, CSS,
             Node.js, MongoDB. entre em contado pelo email: marcosvims@gmail.com
