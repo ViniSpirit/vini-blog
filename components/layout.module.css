@@ -74,7 +74,7 @@
 }
 
 .social a i:hover {
-  color: #008cba;
+  color: blueviolet;
 }
 
 @media screen and (max-width: 800px) {

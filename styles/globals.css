@@ -4,8 +4,13 @@ html,
 body {
   padding: 0;
   margin: 0;
+  font-size: 18px;
   font-family: "Merriweather", "Georgia", serif;
-  background-image: linear-gradient(to right, #fbfbfb, #c5c5e0);
+  background-image: linear-gradient(
+    to right,
+    #ffffff,
+    rgba(191, 163, 218, 0.5)
+  );
 }
 
 a {

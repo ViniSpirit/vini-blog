@@ -29,15 +29,17 @@
 
 .link {
   color: black;
+  color: blueviolet;
   font-size: 25px;
 }
 
 .link:hover {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid blueviolet;
 }
 
 .allLinks {
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .date {
