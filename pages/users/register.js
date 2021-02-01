@@ -23,10 +23,11 @@ const register = () => {
       },
     };
     if (!name || !email || !password || !confirmPassword) {
-      setZError(true);
-      console.log("preencha todos os campos");
+      return;
     } else if (password !== confirmPassword) {
       setError(true);
+    } else if (password.length && confirmPassword.length < 5) {
+      setZError(true);
     } else {
       try {
         const user = await axios.post(
@@ -52,8 +53,8 @@ const register = () => {
       </Head>
       <form className={styles.form} onSubmit={createUser}>
         <div className={styles.error}>
-          {Xerror && <p>password do not match </p>}
-          {Zerror && <p>fill in all fields</p>}
+          {Xerror && <p>password do not match/ </p>}
+          {Zerror && <p>password 5dig or more/</p>}
         </div>
         <div className={styles.container}>
           <h1>Register</h1>
