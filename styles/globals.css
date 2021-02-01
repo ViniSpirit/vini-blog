@@ -6,11 +6,7 @@ body {
   margin: 0;
   font-size: 18px;
   font-family: "Merriweather", "Georgia", serif;
-  background-image: linear-gradient(
-    to right,
-    #ffffff,
-    rgba(191, 163, 218, 0.5)
-  );
+  background-image: linear-gradient(to right, #ffffff, rgb(191, 192, 233));
 }
 
 a {
