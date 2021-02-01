@@ -6,7 +6,8 @@
   margin: auto;
   grid-template-columns: 1fr 1fr;
   border-bottom: 1px solid;
-  padding: 20px 0px;
+  padding-top: 20px;
+  margin-bottom: 20px;
 }
 
 .social {
@@ -89,6 +90,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
   }
   .title {
     text-align: center;
