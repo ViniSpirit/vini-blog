@@ -36,7 +36,7 @@ export default function Home({ data }) {
             Next.js, React Native, Redux, Node.js, Express, MongoDB. entre em
             contato pelo email: marcosvims@gmail.com .
           </p>
-          <h2>Blog</h2>
+          <h1>Blog</h1>
           <div>
             {data.map((post) => (
               <div key={post._id} className={styles.allLinks}>
