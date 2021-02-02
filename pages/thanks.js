@@ -7,9 +7,9 @@ const thanks = () => {
       <Link href="/">
         <a>back to home</a>
       </Link>
-      <div>Obrigado por se inscrever</div>
+      <div>thanks for subscribe</div>
       <Link href="/users/login">
-        <a>faça o login</a>
+        <a>login</a>
       </Link>
     </>
   );
