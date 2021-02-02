@@ -30,8 +30,13 @@ export default function Home({ data }) {
             <h2>{name}</h2>
           </div>
 
-          <p className={styles.p}> test</p>
-          <h1>test</h1>
+          <p className={styles.p}>
+            Oi eu sou Vini, tenho {getAge("01/06/1994")} anos, Desenvolvedor Web
+            Full-Stack. Principais tecnologias: JavaScript, HTML, CSS, React.js,
+            Next.js, React Native, Redux, Node.js, Express, MongoDB. entre em
+            contato pelo email: marcosvims@gmail.com
+          </p>
+          <h1>Blog</h1>
           <div>
             {data.map((post) => (
               <div key={post._id} className={styles.allLinks}>
