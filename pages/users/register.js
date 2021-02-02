@@ -39,7 +39,7 @@ const register = () => {
           },
           config
         );
-        router.push("/thanks");
+        router.push("/");
       } catch (error) {
         console.error(error.message);
       }
