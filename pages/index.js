@@ -31,8 +31,8 @@ export default function Home({ data }) {
           </div>
 
           <p className={styles.p}>
-            Oi eu sou Vini, tenho {getAge("01/06/1994")} anos, Desenvovedor Web
-            Full-Stack. Principais tecnologias: Javascript, HTML, CSS, React.js,
+            Oi eu sou Vini, tenho {getAge("01/06/1994")} anos, Desenvolvedor Web
+            Full-Stack. Principais tecnologias: JavaScript, HTML, CSS, React.js,
             Next.js, React Native, Redux, Node.js, Express, MongoDB. entre em
             contato pelo email: marcosvims@gmail.com
           </p>
