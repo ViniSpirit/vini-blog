@@ -30,8 +30,8 @@ export default function Home({ data }) {
             <h2>{name}</h2>
           </div>
 
-          <p className={styles.p}>test</p>
-          <h1>Blog</h1>
+          <p className={styles.p}> test</p>
+          <h1>test</h1>
           <div>
             {data.map((post) => (
               <div key={post._id} className={styles.allLinks}>
