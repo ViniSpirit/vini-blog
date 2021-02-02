@@ -7,8 +7,19 @@
   flex-direction: column;
 }
 
-.container p img {
-  width: 600px;
+.container img {
+  width: 500px;
+}
+
+.container div div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container div h3 {
+  text-align: center;
 }
 
 .container div iframe {
