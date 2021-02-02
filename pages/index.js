@@ -26,7 +26,7 @@ export default function Home({ data }) {
       <section className={styles.container}>
         <div className={styles.content}>
           <div className={styles.item1}>
-            <img className={styles.img} src="/profile.jpg" alt="" />
+            <img className={styles.img} src="/profile.jpg" alt="profile" />
             <h2>{name}</h2>
           </div>
 
@@ -34,9 +34,9 @@ export default function Home({ data }) {
             Oi eu sou Vini, tenho {getAge("01/06/1994")} anos, Desenvolvedor Web
             Full-Stack. Principais tecnologias: JavaScript, HTML, CSS, React.js,
             Next.js, React Native, Redux, Node.js, Express, MongoDB. entre em
-            contato pelo email: marcosvims@gmail.com
+            contato pelo email: marcosvims@gmail.com .
           </p>
-          <h1>Blog</h1>
+          <h2>Blog</h2>
           <div>
             {data.map((post) => (
               <div key={post._id} className={styles.allLinks}>
