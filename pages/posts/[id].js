@@ -37,7 +37,9 @@ export default function Post({ post = {} }) {
       <div className={styles.container}>
         <h1>{post ? post.title : ""}</h1>
         <p className={styles.date}>{post ? post.date : ""}</p>
-        <div dangerouslySetInnerHTML={{ __html: text }} />
+        <div className={styles.content}>
+          <div dangerouslySetInnerHTML={{ __html: text }} />
+        </div>
       </div>
     </Layout>
   );
